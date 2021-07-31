@@ -27,10 +27,10 @@
   --logo-studio-header: #212121;
   --hero-title-color: #ffffff;
   --team-pic-bg-color: #ffffff;
+  --hero-background-color:#C4C4C4;
 }
 /* Стилизация Боди */
 body {
-  /* width: 1583px; */
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
@@ -63,6 +63,7 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  /* border: 1px solid red; */
 }
 /* Стилизация хедера */
 .header-index {
@@ -138,6 +139,7 @@ ul {
   margin-left: 50px;
 }
 .auth-link {
+  display: inline-flex;
   color: var(--auth-link-color);
   font-style: normal;
   font-weight: 500;
@@ -155,13 +157,37 @@ ul {
 .auth-link {
   text-decoration: none;
 }
-
+.auth-link::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mail-ikon::before{
+  background-image: url(../images/mail.svg);
+}
+.mobilephon-ikon::before{
+  background-image: url(../images/mobilephone.svg);
+}
 /* Стилизирует герои */
 .hero {
-  background-color: var(--secondary-background-color);
+  background-color: var(--hero-background-color);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url(../images/bgimag.jpg)
 }
 .hero-title {
   color: var(--hero-title-color);
@@ -223,6 +249,27 @@ ul {
 .benefits-item {
   margin-right: 30px;
 }
+.benefits-item::before{
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: var(--background-team-color) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.satelite-icon::before{
+  background-image: url(../images/satelite.svg);
+}
+.clock-icon::before{
+  background-image: url(../images/clock.svg);
+}
+.pc-icon::before{
+  background-image: url(../images/pc.svg);
+}
+.nasa-icon::before{
+  background-image: url(../images/nasa.svg);
+}
 .benefits-list .benefits-item:last-child {
   margin-right: 0px;
 }
@@ -257,6 +304,7 @@ ul {
 
 /* Стилизация наша команда */
 .our-team {
+  background-color: var(--background-team-color);
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -296,6 +344,27 @@ ul {
   font-size: 16px;
   line-height: 1.2;
 }
+/* Стилизация наши партнеры */
+.partners{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.partners-list{
+  display: flex;
+  align-items: center;
+}
+.partners-item{
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  padding: 16px 32px ;
+  margin-right: 30px;
+}
+.partners-list .partners-item:last-child{
+  margin-right: 0px;
+}
+
 /* Стилизация футтер */
 .footer {
   background-color: var(--secondary-background-color);
