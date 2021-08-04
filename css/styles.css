@@ -28,10 +28,12 @@
   --hero-title-color: #ffffff;
   --team-pic-bg-color: #ffffff;
   --hero-background-color: #c4c4c4;
+  --main-partners-color: #afb1b8;
 }
 /* Стилизация Боди */
 body {
   background-color: var(--primary-background-color);
+  fill: var(--main-partners-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -341,6 +343,22 @@ ul {
   font-size: 16px;
   line-height: 1.2;
 }
+.team-sitebar {
+  display: inline-flex;
+}
+.team-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: pink;
+}
+.team-logo {
+  width: 20px;
+  height: 20px;
+}
 /* Стилизация наши партнеры */
 .partners {
   padding-top: 94px;
@@ -351,11 +369,11 @@ ul {
   align-items: center;
 }
 .partners-item {
-  width: 170px;
+  /* width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding: 16px 32px;
+  padding: 16px 32px; */
   margin-right: 30px;
 }
 .partners-list .partners-item:last-child {
@@ -363,8 +381,19 @@ ul {
 }
 .partners-link {
   display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
 }
+.partners-item .partners-link:hover,
+.partners-item .partners-link:focus {
+  fill: var(--accent-link-color);
+}
+
 .partners-icon {
+  /* fill: var(--main-partners-color); */
   width: 106px;
   height: 60px;
 }
