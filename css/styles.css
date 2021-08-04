@@ -436,6 +436,30 @@ ul {
 .address-list .address-item:last-child {
   margin-bottom: 0px;
 }
+/* Стилизация сайтбара футера */
+.footer-description {
+  display: flex;
+  width: 231px;
+  align-items: center;
+  border: 1px solid white;
+}
+.footer-sitebar {
+  display: flex;
+}
+.sitebar-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: pink;
+}
+.sitebar-svg {
+  width: 20px;
+  height: 20px;
+}
 /* Убираем заголовок портфолио */
 .portfolio-title {
   position: absolute;
