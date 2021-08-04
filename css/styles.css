@@ -167,9 +167,6 @@ ul {
 .auth-link.auth-ikon:hover {
   fill: var(--accent-link-color);
 }
-.mail {
-  fill: var(--auth-link-color);
-}
 /* .auth-link::before{
   content: "";
   width: 20px;
@@ -264,40 +261,16 @@ ul {
 }
 .benefits-ikon {
   height: 120px;
-  justify-content: center;
-
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+  text-align: center;
 }
 .benefits-img {
   width: 70px;
   height: 70px;
 }
-/* .benefits-item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  background-color: var(--background-team-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
-}
-.satelite-icon::before {
-  background-image: url(../images/satelite.svg);
-}
-.clock-icon::before {
-  background-image: url(../images/clock.svg);
-}
-.pc-icon::before {
-  background-image: url(../images/pc.svg);
-}
-.nasa-icon::before {
-  background-image: url(../images/nasa.svg);
-}
-.benefits-list .benefits-item:last-child {
-  margin-right: 0px;
-} */
+
 .benefits-title {
   color: var(--primary-text-color);
   line-height: 1.14;
@@ -388,7 +361,13 @@ ul {
 .partners-list .partners-item:last-child {
   margin-right: 0px;
 }
-
+.partners-link {
+  display: block;
+}
+.partners-icon {
+  width: 106px;
+  height: 60px;
+}
 /* Стилизация футтер */
 .footer {
   background-color: var(--secondary-background-color);
