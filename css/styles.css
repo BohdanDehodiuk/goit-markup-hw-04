@@ -164,26 +164,8 @@ ul {
   width: 16px;
   height: 16px;
   margin-right: 10px;
-  fill: var(--auth-link-color);
 }
-.auth-link.auth-ikon:hover {
-  fill: var(--accent-link-color);
-}
-/* .auth-link::before{
-  content: "";
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.mail-ikon::before{
-  background-image: url(../images/mail.svg);
-}
-.mobilephon-ikon::before{
-  background-image: url(../images/mobilephone.svg);
-} */
+
 /* Стилизирует герои */
 .hero {
   background-color: var(--hero-background-color);
@@ -344,7 +326,9 @@ ul {
   line-height: 1.2;
 }
 .team-sitebar {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
 .team-link {
   display: block;
@@ -353,7 +337,11 @@ ul {
   padding: 0;
   border: none;
   border-radius: 50%;
+  margin-right: 10px;
   background-color: pink;
+}
+.team-link:last-child {
+  margin-right: 0px;
 }
 .team-logo {
   width: 20px;
