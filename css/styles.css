@@ -29,6 +29,7 @@
   --team-pic-bg-color: #ffffff;
   --hero-background-color: #c4c4c4;
   --main-partners-color: #afb1b8;
+  --sitebar-title-color: #ffffff;
 }
 /* Стилизация Боди */
 body {
@@ -338,7 +339,10 @@ ul {
   border: none;
   border-radius: 50%;
   margin-right: 10px;
-  background-color: pink;
+}
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--accent-link-color);
 }
 .team-link:last-child {
   margin-right: 0px;
@@ -346,6 +350,11 @@ ul {
 .team-logo {
   width: 20px;
   height: 20px;
+  fill: var(--main-partners-color);
+}
+.team-link .team-logo:hover,
+.team-link .team-logo:focus {
+  fill: var(--hero-title-color);
 }
 /* Стилизация наши партнеры */
 .partners {
@@ -357,11 +366,6 @@ ul {
   align-items: center;
 }
 .partners-item {
-  /* width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  padding: 16px 32px; */
   margin-right: 30px;
 }
 .partners-list .partners-item:last-child {
@@ -377,13 +381,17 @@ ul {
 }
 .partners-item .partners-link:hover,
 .partners-item .partners-link:focus {
-  fill: var(--accent-link-color);
+  border: 1px solid var(--accent-link-color);
 }
 
 .partners-icon {
-  /* fill: var(--main-partners-color); */
+  fill: var(--main-partners-color);
   width: 106px;
   height: 60px;
+}
+.partners-icon:hover,
+.partners-icon:focus {
+  fill: var(--accent-link-color);
 }
 /* Стилизация футтер */
 .footer {
@@ -437,14 +445,32 @@ ul {
   margin-bottom: 0px;
 }
 /* Стилизация сайтбара футера */
-.footer-description {
+.conteiner .footer-sitebar {
   display: flex;
-  width: 231px;
   align-items: center;
-  border: 1px solid white;
+}
+.footer-description {
+  margin-right: 70px;
 }
 .footer-sitebar {
   display: flex;
+}
+.sitebar-description {
+}
+.sitebar-title {
+  font-style: normal;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--sitebar-title-color);
+  padding-top: 12px;
+  margin-bottom: 20px;
+}
+
+.sitebar-list {
+  margin-right: 10px;
+}
+.sitebar-list:last-child {
+  margin-right: 0px;
 }
 .sitebar-link {
   display: block;
@@ -453,12 +479,16 @@ ul {
   padding: 0;
   border: none;
   border-radius: 50%;
-  margin-right: 10px;
-  background-color: pink;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sitebar-link:hover,
+.sitebar-link:focus {
+  background-color: var(--accent-link-color);
 }
 .sitebar-svg {
   width: 20px;
   height: 20px;
+  fill: var(--btn-primari-btg-color);
 }
 /* Убираем заголовок портфолио */
 .portfolio-title {
@@ -506,13 +536,15 @@ ul {
 .filter-btn:focus {
   background-color: var(--btn-secondary-btg-color);
   color: var(--btn-secondary-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter-list .filter-btn.current {
   background-color: var(--btn-secondary-btg-color);
   color: var(--btn-secondary-text-color);
 }
 .filter-list {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 /* Стилизация портфолио */
 .portfolio-list {
@@ -524,8 +556,16 @@ ul {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-description {
-  padding: 20px 24px 20px 24px;
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #eeeeee;
