@@ -244,13 +244,20 @@ ul {
 .benefits-item {
   margin-right: 30px;
 }
+.benefits-item:last-child {
+  margin-right: 0px;
+}
 .benefits-ikon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
   text-align: center;
 }
+
 .benefits-img {
   width: 70px;
   height: 70px;
@@ -325,14 +332,18 @@ ul {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.2;
+  margin-bottom: 16px;
 }
 .team-sitebar {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  align-content: center;
 }
 .team-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-partners-color);
   width: 44px;
   height: 44px;
   padding: 0;
@@ -340,22 +351,20 @@ ul {
   border-radius: 50%;
   margin-right: 10px;
 }
+.team-logo {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
 .team-link:hover,
 .team-link:focus {
+  color: var(--sitebar-title-color);
   background-color: var(--accent-link-color);
 }
 .team-link:last-child {
   margin-right: 0px;
 }
-.team-logo {
-  width: 20px;
-  height: 20px;
-  fill: var(--main-partners-color);
-}
-.team-link .team-logo:hover,
-.team-link .team-logo:focus {
-  fill: var(--hero-title-color);
-}
+
 /* Стилизация наши партнеры */
 .partners {
   padding-top: 94px;
@@ -372,26 +381,26 @@ ul {
   margin-right: 0px;
 }
 .partners-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-partners-color);
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--main-partners-color);
   border-radius: 4px;
   padding: 16px 32px;
 }
 .partners-item .partners-link:hover,
 .partners-item .partners-link:focus {
+  color: var(--accent-link-color);
   border: 1px solid var(--accent-link-color);
 }
 
 .partners-icon {
-  fill: var(--main-partners-color);
+  fill: currentColor;
   width: 106px;
   height: 60px;
-}
-.partners-icon:hover,
-.partners-icon:focus {
-  fill: var(--accent-link-color);
 }
 /* Стилизация футтер */
 .footer {
@@ -473,7 +482,9 @@ ul {
   margin-right: 0px;
 }
 .sitebar-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   padding: 0;
